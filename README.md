@@ -16,12 +16,12 @@
 -  conftest.py      # pytest配置
 
 ## 测试覆盖
-POST请求测试
-GET请求测试
-PUT请求测试
-DELETE请求测试
-参数化测试
-异常数据处理测试
+- POST请求测试
+- GET请求测试
+- PUT请求测试
+- DELETE请求测试
+- 参数化测试
+- 异常数据处理测试
 
 ## 如何运行
 
