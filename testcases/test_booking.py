@@ -56,7 +56,55 @@ class TestBookingAPI:
         assert response.status_code == 200
         print("测试完成")
 
+    def test_04_put_request(self):
+        """测试PUT请求"""
+        url = f"{self.base_url}{ENDPOINTS['update_booking']}"
+        test_data = {"id": 1, "name": "更新后的数据"}
 
+        response = self.session.put(url, json=test_data)
 
+        assert response.status_code == 200
+        response_json = response.json()
+        assert response_json["json"] == test_data
+        print("PUT请求测试通过！")
 
+    def test_05_delete_request(self):
+        """测试DELETE请求"""
+        url = f"{self.base_url}{ENDPOINTS['delete_booking']}"
 
+        response = self.session.delete(url)
+
+        assert response.status_code == 200
+        print("DELETE请求测试通过！")
+
+    class TestParameterized:
+        """参数化测试示例"""
+
+    @pytest.mark.parametrize("name,age,expected", [
+        ("张三", 18, "成人"),
+        ("李四", 6, "儿童"),
+        ("王五", 65, "老人"),
+        ("", 20, "姓名不能为空"),
+    ])
+    def test_user_info(self, name, age, expected):
+        """参数化测试：用同一段代码测试多组数据"""
+        print(f"\n测试数据: name={name}, age={age}, 期望={expected}")
+
+        url = f"{BASE_URL}/post"
+        data = {"name": name, "age": age}
+        response = requests.post(url, json=data)
+
+        assert response.status_code == 200
+
+        # 这里是模拟的业务逻辑判断
+        if len(name) == 0:
+            result = "姓名不能为空"
+        elif age < 18:
+            result = "儿童"
+        elif age >= 60:
+            result = "老人"
+        else:
+            result = "成人"
+
+        assert result == expected
+        print(f"实际结果: {result} ")

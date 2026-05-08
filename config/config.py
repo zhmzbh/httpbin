@@ -6,3 +6,4 @@ ENDPOINTS = {
     "update_booking": "/put",
     "delete_booking": "/delete",
 }
+
