@@ -10,10 +10,10 @@
 - Faker测试数据生成
 
 ## 项目结构
-├── config/          # 配置文件
-├── testcases/       # 测试用例
-├── utils/           # 工具函数
-└── conftest.py      # pytest配置
+- config/          # 配置文件
+- testcases/       # 测试用例
+-  utils/           # 工具函数
+-  conftest.py      # pytest配置
 
 ## 测试覆盖
 POST请求测试
