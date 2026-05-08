@@ -14,6 +14,5 @@
 # 安装依赖
 pip install pytest requests faker
 
-#运行测试
+# 运行测试
 pytest -v -s
-
