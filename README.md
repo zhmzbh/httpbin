@@ -14,10 +14,10 @@
 # 安装依赖
 pip install pytest requests faker
 
-# 运行测试
+#运行测试
 pytest -v -s
 
-#项目结构
+##项目结构
 ├── config/          # 配置文件
 ├── testcases/       # 测试用例
 ├── utils/           # 工具函数
