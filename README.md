@@ -9,13 +9,13 @@
 - Requests库
 - Faker测试数据生成
 
-##项目结构
+## 项目结构
 ├── config/          # 配置文件
 ├── testcases/       # 测试用例
 ├── utils/           # 工具函数
 └── conftest.py      # pytest配置
 
-##测试覆盖
+## 测试覆盖
 POST请求测试
 GET请求测试
 异常数据处理测试
